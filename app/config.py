@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-STORAGE_ROOT_STR = os.getenv("STORAGE_ROOT", "./data")
 STORAGE_ROOT = Path(os.getenv("STORAGE_ROOT", "./data")).resolve()
 STORAGE_ROOT.mkdir(parents=True, exist_ok=True)
 DB_URL = os.getenv("DB_URL", "sqlite:///database.db")
