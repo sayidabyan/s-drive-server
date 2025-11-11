@@ -17,6 +17,7 @@ S-Drive-Server is the backend component for S-Drive, a self-hosted cloud storage
 | JWT_ALGORITHM | Algorithm for JWT encoding | `HS256` | No |
 | DEFAULT_ADMIN_USERNAME | Default admin account username | `admin` | No |
 | DEFAULT_ADMIN_PASSWORD | Default admin account password | `SecurePassword123!` | Recommended |
+
 After you're done, you can continue and do
 ```
 cd s-drive-server # or whatever you name the repo/folder
