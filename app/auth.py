@@ -6,10 +6,8 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from jwt import InvalidTokenError
 from pwdlib import PasswordHash
-from sqlmodel import Session, select
 
 from .config import JWT_ACCESS_TOKEN_DURATION, JWT_ALGORITHM, JWT_SECRET_KEY
-from .db import get_session
 from .models import User
 from .query import get_user_by_username
 
@@ -63,9 +61,9 @@ def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
         username = payload.get("sub")
         expire = payload.get("exp")
         if username is None:
-            raise credentials_invalid_exception_exception
+            raise credentials_invalid_exception
         if expire is None:
-            raise credentials_invalid_exception_exception
+            raise credentials_invalid_exception
     except InvalidTokenError:
         raise credentials_invalid_exception
 

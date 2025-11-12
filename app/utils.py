@@ -1,12 +1,7 @@
-import uuid
 from pathlib import Path
-from typing import Optional
 
-from sqlmodel import Session, select
 
-from .auth import get_password_hash
 from .config import STORAGE_ROOT
-from .db import engine
 from .models import Folder, User
 
 

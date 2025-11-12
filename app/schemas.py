@@ -3,7 +3,7 @@ from uuid import UUID
 
 from sqlmodel import SQLModel
 
-from .models import File, Folder
+from .models import File
 
 
 class Token(SQLModel):

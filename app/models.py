@@ -6,7 +6,6 @@ from sqlmodel import (
     Field,
     ForeignKey,
     Relationship,
-    Session,
     SQLModel,
     UniqueConstraint,
 )
